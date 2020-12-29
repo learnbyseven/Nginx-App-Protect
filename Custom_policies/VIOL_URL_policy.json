@@ -1,0 +1,28 @@
+{
+    "policy": {
+        "name": "Block_HTTP_Method",
+        "template": {
+            "name": "POLICY_TEMPLATE_NGINX_URL"
+        },
+        "applicationLanguage": "utf-8",
+        "enforcementMode": "blocking",
+        "blocking-settings": {
+            "violations": [
+                {
+                    "block": true,
+                    "name": "VIOL_URL",
+		    "description": "block http methods"
+                }
+            ]
+         },
+            "urls": [
+            	{
+                "method": "PUT",
+                "name": "/",
+                "protocol": "http",
+                "type": "explicit",
+                "isAllowed": false
+            	}
+        ]
+    }
+}
